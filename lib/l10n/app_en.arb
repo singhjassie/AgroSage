@@ -1,0 +1,60 @@
+{
+    "app_name": "AgroSage",
+    "@app_name": {
+        "description": "app name"
+    },
+    "greeting": "Hi, {username}!",
+    "@greeting": {
+        "description": "greeting on the app bar",
+        "placeholders": {
+            "username": {
+                "type": "String"
+            }
+        }
+    },
+    "crop_price": "Crop Price",
+    "@crop_price": {
+        "description": "Crop Price on the homescreen"
+    },
+    "get_recommended": "Get Crop Recommendation",
+    "@get_recommended": {
+        "description": "Get Crop Recommendation on the homescreen"
+    },
+    "weather":"Weather",
+    "@weather": {
+        "description": "Weather on the homescreen"
+    },
+    "temperature":"Temperature",
+    "@temperature": {
+        "description": "Temperature on the homescreen"
+    },
+    "search_products":"Search Products",
+    "@search_products": {
+        "description": "Search Products on the homescreen"
+    },
+    "seeds":"Seeds",
+    "@seeds": {
+        "description": "Seeds on the homescreen"
+    },
+    "wheat_seeds":"wheat seeds",
+    "@wheat_seeds": {
+        "description": "Wheat seeds on the homescreen"
+    },
+    "fertile":"Fertile",
+    "@fertile": {
+        "description": "Fertile on the homescreen"
+    },
+    "rice_seeds":"Rice seeds",
+    "@rice_seeds": {
+        "description": "Rice seeds on the homescreen"
+    },
+    "corn_seeds": "Corn seeds",
+    "@corn_seeds": {
+        "description": "Corn seeds on the homescreen"
+    },
+    "sugarcane"  : "Sugrarcane seeds",
+    "@sugarcane": {
+        "description": "Sugarcane seeds on the homescreen"
+    }
+
+}

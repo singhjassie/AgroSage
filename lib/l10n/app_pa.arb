@@ -1,0 +1,17 @@
+{
+    "@@locale": "pa",
+    "app_name": "ਐਗਰੋਸੇਜ",
+    "greeting": "ਹੈਲੋ, {username}!",
+    "crop_price": "ਫਸਲ ਦੀ ਕੀਮਤ",
+    "get_recommended": "ਫਸਲ ਦੀ ਸਿਫਾਰਸ਼ ਪ੍ਰਾਪਤ ਕਰੋ",
+    "weather": "ਮੌਸਮ",
+    "temperature": "ਤਾਪਮਾਨ",
+    "search_products": "ਖੋਜ ਉਤਪਾਦ",
+    "seeds": "ਬੀਜ",
+    "wheat_seeds": "ਕਣਕ ਦੇ ਬੀਜ",
+    "fertile": "ਉਪਜਾਊ",
+    "rice_seeds": "ਚਾਵਲ ਦੇ ਬੀਜ",
+    "corn_seeds": "ਮੱਕੀ ਦੇ ਬੀਜ",
+    "sugarcane": "ਗੰਨੇ ਦੇ ਬੀਜ"
+
+}

@@ -1,0 +1,16 @@
+{
+    "@@locale": "hi",
+    "app_name": "एग्रोसेज",
+    "greeting": "नमस्ते, {username}!",
+    "crop_price": "फसल की कीमत",
+    "get_recommended": "फसल अनुशंसा प्राप्त करें",
+    "weather": "मौसम",
+    "temperature": "तापमान",
+    "search_products": "उत्पादों को खोजना",
+    "seeds": "बीज",
+    "wheat_seeds": "गेहूं के बीज",
+    "fertile": "उपजाऊ",
+    "rice_seeds": "चावल के बीज",
+    "corn_seeds": "मक्के के बीज",
+    "sugarcane": "गन्ने के बीज"
+}
