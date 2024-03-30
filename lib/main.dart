@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
           )
         )
       ),
-      home: const Notifications()
+      home:  NotificationScreen()
     );
   }
 }
