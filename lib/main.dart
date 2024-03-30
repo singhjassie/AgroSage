@@ -1,4 +1,6 @@
+import 'package:agrosage/screens.dart/detection_result.dart';
 import 'package:agrosage/screens.dart/notification.dart';
+import 'package:agrosage/screens.dart/recommendation.dart';
 import 'package:flutter/material.dart';
 
 
@@ -60,7 +62,7 @@ class MyApp extends StatelessWidget {
           )
         )
       ),
-      home:  NotificationScreen()
+      home: RecommendationScreen()
     );
   }
 }
