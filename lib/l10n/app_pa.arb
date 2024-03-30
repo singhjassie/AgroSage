@@ -12,6 +12,21 @@
     "fertile": "ਉਪਜਾਊ",
     "rice_seeds": "ਚਾਵਲ ਦੇ ਬੀਜ",
     "corn_seeds": "ਮੱਕੀ ਦੇ ਬੀਜ",
-    "sugarcane": "ਗੰਨੇ ਦੇ ਬੀਜ"
+    "sugarcane": "ਗੰਨੇ ਦੇ ਬੀਜ",
+    "chat_ai_label": "ਚੈਟਬੋਟ ਨਾਲ ਚੈਟ ਕਰੋ",
+    "detection_label": "ਫਸਲ ਬਿਮਾਰੀਆਂ ਪਤਾ ਲਗਾਓ",
+    "suggestion_label": "ਫਸਲ ਸੁਝਾਅ ਪ੍ਰਾਪਤ ਕਰੋ",
+    "chat_ai_description": "ਏਆਈ ਚੈਟਬੋਟ ਨਾਲ ਗੱਲਬਾਤ ਕਰਕੇ ਖੇਤੀ ਸਮੱਸਿਆਵਾਂ ਦਾ ਹੱਲ ਪ੍ਰਾਪਤ ਕਰੋ",
+    "detection_description": "ਫਸਲਾਂ ਦੀਆਂ ਬਿਮਾਰੀਆਂ ਦਾ ਪਤਾ ਲਗਾਓ ਅਤੇ ਏਆਈ ਅਧਾਰਤ ਹੱਲ ਪ੍ਰਾਪਤ ਕਰੋ",
+    "suggestion_description": "ਆਪਣੇ ਟਿਕਾਣੇ ਦੇ ਆਧਾਰ 'ਤੇ ਫ਼ਸਲ ਸੰਬੰਧੀ ਸੁਝਾਅ ਪ੍ਰਾਪਤ ਕਰੋ",
+    "farm_with_ai": "ਏਆਈ ਨਾਲ ਖੇਤੀ ਕਰੋ",
+    "search_products": "ਉਤਪਾਦ ਲੱਭੋ",
+    "weather": "ਮੌਸਮ",
+    "temperature": "ਤਾਪਮਾਨ",
+    "precipitatoin": "ਵਰਖਾ",
+    "humidity": "ਨਮੀ",
+    "wind_speed": "ਹਵਾ ਦੀ ਗਤੀ"
+
+
 
 }

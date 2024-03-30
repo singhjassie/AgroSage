@@ -23,13 +23,6 @@ final List<Product> productList = [
     category: Category.seeds,
   ),
   Product(
-    name: 'Sugrarcane seeds',
-    discountedPrice: 250,
-    actualPrice: 300,
-    brand: 'Fertile',
-    category: Category.seeds,
-  ),
-  Product(
     name: 'wheat seeds',
     discountedPrice: 250,
     actualPrice: 300,

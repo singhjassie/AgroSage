@@ -1,14 +1,13 @@
+import 'package:agrosage/data/apis/weather.dart';
+import 'package:agrosage/data/product_list.dart';
 import 'package:agrosage/screens/chatbot_screen.dart';
-import 'package:agrosage/screens/crop_suggestion_screen.dart';
 import 'package:agrosage/screens/detection_screen.dart';
 import 'package:agrosage/widgets/label_divider.dart';
 import 'package:agrosage/widgets/product_cat_card.dart';
 import 'package:agrosage/widgets/text_tile.dart';
-import 'package:agrosage/widgets/vertical_card.dart';
 import 'package:agrosage/widgets/weather_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:image_picker/image_picker.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key, required this.changeScreen});
@@ -54,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(24),
                     ),
                     contentPadding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    hintText: 'Search Products',
+                    hintText: "${AppLocalizations.of(context)?.search_products}",
                   ),
                 ),
               ),
@@ -72,31 +71,23 @@ class HomeScreen extends StatelessWidget {
                     delegate: SliverChildBuilderDelegate(
                       (BuildContext context, int index) {
                         return ProductCategoryCard(
-                          categoryName: 'Seeds',
+                          categoryName: productList[index].name,
                           imageUrl:
-                              'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGxhbnR8ZW58MHx8MHx8fDA%3D',
+                              'assets/images/wheat-green.jpg',
                           changeScreen: changeScreen,
                         );
                       },
-                      childCount: 6,
+                      childCount: 3,
                     ),
                   ),
                 ],
               ),
-              const LabelDivider(label: 'Farm with AI'),
+              LabelDivider(label: "${AppLocalizations.of(context)?.farm_with_ai}"),
               TextTile(
-                title: 'Get Crop Suggestion',
-                description: 'Get crop suggestion based on your location',
-                imagePath: 'assets/images/wheat-green.jpg',
-                onTap: () {
-                  
-                },
-              ),
-              TextTile(
-                title: 'Chat with AI Chatbot',
+                title: "${AppLocalizations.of(context)?.chat_ai_label}",
                 description:
-                    'Get solution of farming problems by chatting with AI Chatbot',
-                imagePath: 'assets/images/wheat-green.jpg',
+                    "${AppLocalizations.of(context)?.chat_ai_description}",
+                imagePath: 'assets/images/chat-with-ai.webp',
                 onTap: () {
                   Navigator.push(
                       context,
@@ -105,9 +96,9 @@ class HomeScreen extends StatelessWidget {
                 },
               ),
               TextTile(
-                title: 'Detect crop Disieses',
-                description: 'Detect crop Disieses and Get AI Based Solution',
-                imagePath: 'assets/images/wheat-green.jpg',
+                title: "${AppLocalizations.of(context)?.detection_label}",
+                description: "${AppLocalizations.of(context)?.detection_description}",
+                imagePath: 'assets/images/detection.jpg',
                 onTap: () {
                   Navigator.push(
                       context,
@@ -115,23 +106,31 @@ class HomeScreen extends StatelessWidget {
                           builder: (context) => const DetectionScreen()));
                 },
               ),
-              const LabelDivider(label: 'Current Crop Price'),
-              const SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    VerticalCardWithImage(),
-                    VerticalCardWithImage(),
-                    VerticalCardWithImage(),
-                    VerticalCardWithImage(),
-                    VerticalCardWithImage(),
-                  ],
-                ),
+              TextTile(
+                title: "${AppLocalizations.of(context)?.suggestion_label}",
+                description: "${AppLocalizations.of(context)?.suggestion_description}",
+                imagePath: 'assets/images/crop-suggestion.jpg',
+                onTap: () {
+                  
+                },
               ),
+              // const LabelDivider(label: 'Current Crop Price'),
+              // const SingleChildScrollView(
+              //   scrollDirection: Axis.horizontal,
+              //   child: Row(
+              //     children: [
+              //       VerticalCardWithImage(),
+              //       VerticalCardWithImage(),
+              //       VerticalCardWithImage(),
+              //       VerticalCardWithImage(),
+              //       VerticalCardWithImage(),
+              //     ],
+              //   ),
+              // ),
               const SizedBox(
                 height: 16,
               ),
-              const LabelDivider(label: 'Weather'),
+              LabelDivider(label: "${AppLocalizations.of(context)?.weather}"),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 12),
                 child: CustomScrollView(
@@ -147,11 +146,11 @@ class HomeScreen extends StatelessWidget {
                       ),
                       delegate: SliverChildBuilderDelegate(
                         (BuildContext context, int index) {
-                          return const WeatherCard(
-                              title: 'Temperature',
-                              icon: Icons.thermostat,
-                              value: '30',
-                              unit: '°C');
+                          return WeatherCard(
+                              title: weatherData[index].label,
+                              icon: weatherData[index].icon,
+                              value: weatherData[index].value,
+                              unit: weatherData[index].units);
                         },
                         childCount: 4,
                       ),

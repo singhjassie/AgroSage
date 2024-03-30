@@ -24,8 +24,8 @@ class WelcomeScreen extends StatelessWidget {
          const SizedBox(height: 50,),
            Container(
             margin: const EdgeInsets.all(25),
-             child: const Text(
-              "Grow your Knowledge ,  Grow your Crops",style: TextStyle(color: Colors.white70,fontSize: 50,fontWeight: FontWeight.bold),),
+             child: Text(
+              "Grow your Knowledge ,  Grow your Crops",style: TextStyle(color: Colors.white.withOpacity(.8),fontSize: 50,fontWeight: FontWeight.bold),),
            ),
            const SizedBox(height: 200,),
            SizedBox(
@@ -42,7 +42,7 @@ class WelcomeScreen extends StatelessWidget {
                 
               onPressed: (){
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Login(),));
-              }, child: const Text("LOGIN",style: TextStyle(
+              }, child: const Text("Login",style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
                 fontSize: 20),)),

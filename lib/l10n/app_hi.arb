@@ -12,5 +12,19 @@
     "fertile": "उपजाऊ",
     "rice_seeds": "चावल के बीज",
     "corn_seeds": "मक्के के बीज",
-    "sugarcane": "गन्ने के बीज"
+    "sugarcane": "गन्ने के बीज",
+    "chat_ai_label": "चैटबॉट के साथ चैट करें",
+    "detection_label": "फसल रोगों का पता लगाएं",
+    "suggestion_label": "फसल संबंधी सुझाव प्राप्त करें",
+    "chat_ai_description": "चैटबॉट से चैट करके खेती की समस्याओं का समाधान पाएं",
+    "detection_description": "फसल रोगों का पता लगाएं और एआई आधारित समाधान प्राप्त करें",
+    "suggestion_description": "अपने स्थान के आधार पर फसल संबंधी सुझाव प्राप्त करें",
+    "farm_with_ai": "एआई के साथ खेती करें",
+    "search_products": "उत्पाद ढूंढें",
+    "weather": "मौसम",
+    "temperature": "तापमान",
+    "precipitatoin": "वर्षण",
+    "humidity": "नमी",
+    "wind_speed": "हवा की गति"
+
 }

@@ -58,7 +58,7 @@ class _AgroSageState extends State<AgroSage> {
       child: Scaffold(
         backgroundColor: colorScheme.background,
         appBar: AppBar(
-          title: Text("${AppLocalizations.of(context)?.greeting('XXX')}"),
+          title: Text("${AppLocalizations.of(context)?.greeting('User')}"),
           actions: [
             IconButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) => const NotificationScreen(),));

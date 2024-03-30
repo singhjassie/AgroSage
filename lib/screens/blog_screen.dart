@@ -1,5 +1,4 @@
 import 'package:agrosage/model/blog_model.dart';
-import 'package:agrosage/screens/posts_screen.dart';
 import 'package:agrosage/widgets/label_divider.dart';
 import 'package:agrosage/widgets/learn.dart';
 import 'package:agrosage/widgets/text_tile.dart';

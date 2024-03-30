@@ -55,6 +55,19 @@
     "sugarcane"  : "Sugrarcane seeds",
     "@sugarcane": {
         "description": "Sugarcane seeds on the homescreen"
-    }
+    },
+    "chat_ai_label": "Chat with AI Chatbot",
+    "detection_label": "Detect crop Disieses",
+    "suggestion_label": "Get Crop Suggestion",
+    "chat_ai_description": "Get solution of farming problems by chatting with AI Chatbot",
+    "detection_description": "Detect crop Disease and Get AI Based Solution",
+    "suggestion_description": "Get crop suggestion based on your location",
+    "farm_with_ai": "Farm with AI",
+    "search_products": "Search Products",
+    "weather": "Weather",
+    "temperature": "Temperature",
+    "precipitatoin": "Precipitatoin",
+    "humidity": "Humidity",
+    "wind_speed": "Wind Speed"
 
 }

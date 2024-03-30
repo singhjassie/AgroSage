@@ -70,14 +70,14 @@ void main() async{
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      locale: const Locale('en'),
+      locale: const Locale('hi'),
       supportedLocales: const [
         Locale('en'),
         Locale('hi'),
         Locale('pa'),
       ],
         //home: ProfileScreen(),
-        home: const AgroSage(),
+        home: const SplashScreen(),
         
       ),
    ),

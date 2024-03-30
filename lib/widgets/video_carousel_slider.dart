@@ -13,8 +13,8 @@ class VideoCarouselSlider extends StatefulWidget {
 class _VideoCarouselSliderState extends State<VideoCarouselSlider> {
   List videoList = [
     {"id": 1, "url": 'https://www.youtube.com/watch?v=JeU_EYFH1Jk'},
-    {"id": 2, "url": 'https://www.youtube.com/watch?v=fH3UMw1v6Wg'},
-    {"id": 3, "url": 'https://www.youtube.com/watch?v=fH3UMw1v6Wg'},
+    {"id": 2, "url": 'https://www.youtube.com/watch?v=OzGudoy7keA'},
+    {"id": 3, "url": 'https://www.youtube.com/watch?v=r_YGlKihHtk'},
   ];
   final CarouselController carouselController = CarouselController();
   int currentIndex = 0;

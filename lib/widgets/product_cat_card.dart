@@ -24,11 +24,12 @@ class ProductCategoryCard extends StatelessWidget {
             ),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(50.0), // Adjust as needed
-              child: FadeInImage.assetNetwork(
-                placeholder: 'assets/images/wheat.jpg', // Placeholder image
-                image: imageUrl, // Use provided imageUrl
-                fit: BoxFit.cover, // Adjust image fit within the circle
-              ),
+              child: Image.asset(imageUrl, fit: BoxFit.cover,)
+              // FadeInImage.assetNetwork(
+              //   placeholder: 'assets/images/wheat.jpg', // Placeholder image
+              //   image: imageUrl, // Use provided imageUrl
+              //   fit: BoxFit.cover, // Adjust image fit within the circle
+              // ),
             ),
           ),
           const SizedBox(height: 4),
