@@ -16,6 +16,10 @@ class _DetectionScreenState extends State<DetectionScreen> {
       saveConfig: SaveConfig.photo(),
       availableFilters: const [],
       topActionsBuilder: (state) => (Container()),
+      // bottomActionsBuilder: (state) => ,
+      onMediaTap: (mediaCapture) => {
+        print(mediaCapture)
+      },
       // theme: AwesomeTheme().copyWith(bottomActionsBackgroundColor: colorScheme.primary.withOpacity(.5)),
       sensorConfig: SensorConfig.single(
           aspectRatio: CameraAspectRatios.ratio_16_9,

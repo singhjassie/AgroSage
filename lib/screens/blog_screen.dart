@@ -22,47 +22,47 @@ class BlogScreen extends StatelessWidget {
           const SizedBox(
             height: 3,
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 12),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Column(
               children: [
-                LabelDivider(label: 'News'),
+                const LabelDivider(label: 'News'),
                 TextTile(
                     title: 'title',
                     description: 'description',
-                    image_path: 'assets/images/leaf_image.png',
-                    destination: PostScreen(),
+                    imagePath: 'assets/images/leaf_image.png',
+                    onTap: (){},
                     ),
                 TextTile(
                     title: 'title',
                     description: 'description',
-                    image_path: 'assets/images/leaf_image.png',
-                    destination: PostScreen(),
+                    imagePath: 'assets/images/leaf_image.png',
+                    onTap: (){},
                     ),
                 TextTile(
                     title: 'title',
                     description: 'description',
-                    image_path: 'assets/images/leaf_image.png',
-                    destination: PostScreen(),
+                    imagePath: 'assets/images/leaf_image.png',
+                    onTap: (){},
                     ),
-                LabelDivider(label: 'Others'),
+                const LabelDivider(label: 'Others'),
                 TextTile(
                     title: 'title',
                     description: 'description',
-                    image_path: 'assets/images/leaf_image.png',
-                    destination: PostScreen(),
-                    ),
-                TextTile(
-                    title: 'title',
-                    description: 'description',
-                    image_path: 'assets/images/leaf_image.png',
-                    destination: PostScreen(),
+                    imagePath: 'assets/images/leaf_image.png',
+                    onTap: (){},
                     ),
                 TextTile(
                     title: 'title',
                     description: 'description',
-                    image_path: 'assets/images/leaf_image.png',
-                    destination: PostScreen(),
+                    imagePath: 'assets/images/leaf_image.png',
+                    onTap: (){},
+                    ),
+                TextTile(
+                    title: 'title',
+                    description: 'description',
+                    imagePath: 'assets/images/leaf_image.png',
+                    onTap: (){},
                     ),
               ],
             ),

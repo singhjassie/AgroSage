@@ -5,13 +5,13 @@ class TextTile extends StatelessWidget {
     super.key,
     required this.title,
     required this.description,
-    required this.image_path,
-    required this.destination,
+    required this.imagePath,
+    required this.onTap,
   });
   final String title;
   final String description;
-  final String image_path;
-  final Widget destination;
+  final String imagePath;
+  final void Function() onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +19,7 @@ class TextTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 14),
       child: InkWell(
-        onTap: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => destination));
-        },
+        onTap: onTap,
         child: Container(
           width: double.infinity,
           height: 100,
@@ -37,7 +34,7 @@ class TextTile extends StatelessWidget {
                 child: ClipRRect(
                     borderRadius: BorderRadius.circular(12),
                     child: Image.asset(
-                      image_path,
+                      imagePath,
                       fit: BoxFit.fill,
                     )),
               ),

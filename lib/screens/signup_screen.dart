@@ -1,3 +1,4 @@
+import 'package:agrosage/agrosage.dart';
 import 'package:agrosage/profile/profile.dart';
 import 'package:agrosage/firebase/auth_provider.dart';
 import 'package:agrosage/screens/login_screen.dart';
@@ -156,7 +157,8 @@ class _SignUpState extends State<SignUp> {
                                       Text(
                                         "Remember me",
                                         style: TextStyle(
-                                          color: colorScheme.onBackground.withOpacity(.7),
+                                          color: colorScheme.onBackground
+                                              .withOpacity(.7),
                                           fontSize: 16,
                                         ),
                                       )
@@ -177,6 +179,14 @@ class _SignUpState extends State<SignUp> {
                                         ),
                                         onPressed: () {
                                           if (_key.currentState!.validate()) {
+                                            Navigator.of(context).pop();
+                                            Navigator.pushReplacement(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const AgroSage(),
+                                              ),
+                                            );
                                             // If form is valid, call storeData to save user data
                                             storeData();
                                           }
@@ -231,7 +241,8 @@ class _SignUpState extends State<SignUp> {
                                       Text(
                                         "Already have an account?",
                                         style: TextStyle(
-                                          color: colorScheme.onBackground.withOpacity(.7),
+                                          color: colorScheme.onBackground
+                                              .withOpacity(.7),
                                           fontSize: 18,
                                         ),
                                       ),

@@ -1,21 +1,16 @@
-import 'package:agrosage/screens/shop_screen.dart';
 import 'package:flutter/material.dart';
 
 class ProductCategoryCard extends StatelessWidget {
-  const ProductCategoryCard({super.key, required this.categoryName, required this.imageUrl});
+  const ProductCategoryCard({super.key, required this.categoryName, required this.imageUrl, required this.changeScreen});
   final String categoryName;
   final String imageUrl; // Add imageUrl parameter
+  final void Function(int) changeScreen;
 
   @override
   Widget build(BuildContext context) {
     ColorScheme colorScheme = Theme.of(context).colorScheme;
     return InkWell(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const ShopScreen()),
-        );
-      },
+      onTap: (){changeScreen(3);},
       
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

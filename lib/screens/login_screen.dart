@@ -45,6 +45,7 @@ class _LoginState extends State<Login> {
       };
       try {
         await ap.loginUser(data, context);
+        Navigator.of(context).pop();
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(

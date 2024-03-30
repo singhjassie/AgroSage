@@ -24,7 +24,9 @@ class AgroSage extends StatefulWidget {
 
 class _AgroSageState extends State<AgroSage> {
   int _currentScreenIndex = 0;
-  Widget _currentScreenWidget = const HomeScreen();
+  Widget? _currentScreenWidget;
+
+
 
   _changeScreen(int index) {
     setState(() {
@@ -34,7 +36,7 @@ class _AgroSageState extends State<AgroSage> {
         );
       }  else if (index == 0) {
         _currentScreenIndex = index;
-        _currentScreenWidget = const HomeScreen();
+        _currentScreenWidget = HomeScreen(changeScreen: _changeScreen,);
       } else if (index == 1) {
         _currentScreenIndex = index;
         _currentScreenWidget = const BlogScreen();
@@ -128,7 +130,7 @@ class _AgroSageState extends State<AgroSage> {
             ),
           ],
         ),
-        body: _currentScreenWidget,
+        body: _currentScreenWidget?? HomeScreen(changeScreen: _changeScreen),
       ),
     );
   }

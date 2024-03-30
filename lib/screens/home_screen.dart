@@ -8,9 +8,11 @@ import 'package:agrosage/widgets/vertical_card.dart';
 import 'package:agrosage/widgets/weather_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:image_picker/image_picker.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({super.key, required this.changeScreen});
+  final void Function(int) changeScreen;
 
   @override
   Widget build(BuildContext context) {
@@ -69,10 +71,11 @@ class HomeScreen extends StatelessWidget {
                     ),
                     delegate: SliverChildBuilderDelegate(
                       (BuildContext context, int index) {
-                        return const ProductCategoryCard(
+                        return ProductCategoryCard(
                           categoryName: 'Seeds',
                           imageUrl:
                               'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGxhbnR8ZW58MHx8MHx8fDA%3D',
+                          changeScreen: changeScreen,
                         );
                       },
                       childCount: 6,
@@ -81,24 +84,36 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
               const LabelDivider(label: 'Farm with AI'),
-              const TextTile(
+              TextTile(
                 title: 'Get Crop Suggestion',
                 description: 'Get crop suggestion based on your location',
-                image_path: 'assets/images/leaf_image.png',
-                destination: CropSuggestionScreen(),
+                imagePath: 'assets/images/wheat-green.jpg',
+                onTap: () {
+                  
+                },
               ),
-              const TextTile(
+              TextTile(
                 title: 'Chat with AI Chatbot',
                 description:
                     'Get solution of farming problems by chatting with AI Chatbot',
-                image_path: 'assets/images/leaf_image.png',
-                destination: ChatbotScreen(),
+                imagePath: 'assets/images/wheat-green.jpg',
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ChatbotScreen()));
+                },
               ),
-              const TextTile(
+              TextTile(
                 title: 'Detect crop Disieses',
                 description: 'Detect crop Disieses and Get AI Based Solution',
-                image_path: 'assets/images/leaf_image.png',
-                destination: DetectionScreen(),
+                imagePath: 'assets/images/wheat-green.jpg',
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const DetectionScreen()));
+                },
               ),
               const LabelDivider(label: 'Current Crop Price'),
               const SingleChildScrollView(
