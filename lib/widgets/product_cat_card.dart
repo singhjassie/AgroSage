@@ -1,5 +1,4 @@
-import 'package:agrosage/screens/other_product_screen.dart';
-// import 'package:agrosage/screens/product_screen.dart';
+import 'package:agrosage/screens/shop_screen.dart';
 import 'package:flutter/material.dart';
 
 class ProductCategoryCard extends StatelessWidget {
@@ -14,9 +13,10 @@ class ProductCategoryCard extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const OtherProductScreen()),
+          MaterialPageRoute(builder: (context) => const ShopScreen()),
         );
       },
+      
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

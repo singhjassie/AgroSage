@@ -1,3 +1,4 @@
+import 'package:agrosage/agrosage.dart';
 import 'package:agrosage/firebase_options.dart';
 import 'package:agrosage/screens/splash_screen.dart';
 import 'package:agrosage/firebase/auth_provider.dart';
@@ -76,7 +77,7 @@ void main() async{
         Locale('pa'),
       ],
         //home: ProfileScreen(),
-        home: const SplashScreen(),
+        home: const AgroSage(),
         
       ),
    ),

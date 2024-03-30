@@ -3,8 +3,9 @@ parameter like AppBar, Bottom Navigation, Sidebar etc.
 All of the data operations and API calls will be initiated from here
 */
 
-import 'package:agrosage/screens/posts_screen.dart';
+import 'package:agrosage/screens/notification_screen.dart';
 import 'package:agrosage/screens/profile_screen.dart';
+import 'package:agrosage/screens/shop_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -39,7 +40,7 @@ class _AgroSageState extends State<AgroSage> {
         _currentScreenWidget = const BlogScreen();
       } else if (index == 3) {
         _currentScreenIndex = index;
-        _currentScreenWidget = const PostScreen();
+        _currentScreenWidget = const ShopScreen();
       } else if (index == 4) {
         _currentScreenIndex = index;
         _currentScreenWidget = const ProfileScreen();
@@ -53,10 +54,13 @@ class _AgroSageState extends State<AgroSage> {
     return PopScope(
       onPopInvoked: (didPop) => false,
       child: Scaffold(
+        backgroundColor: colorScheme.background,
         appBar: AppBar(
           title: Text("${AppLocalizations.of(context)?.greeting('XXX')}"),
           actions: [
-            IconButton(onPressed: (){}, icon: const Icon(Icons.notifications))
+            IconButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const NotificationScreen(),));
+            }, icon: const Icon(Icons.notifications))
           ],
         ),
         bottomNavigationBar: NavigationBar(
@@ -91,25 +95,25 @@ class _AgroSageState extends State<AgroSage> {
             ),
             NavigationDestination(
               selectedIcon: Icon(
-                Icons.add,
+                Icons.health_and_safety_sharp,
                 color: colorScheme.primaryContainer,
               ),
               icon: Icon(
-                Icons.add_outlined,
+                Icons.health_and_safety_sharp,
                 color: colorScheme.onPrimaryContainer,
               ),
-              label: 'Detect',
+              label: 'Doctor',
             ),
             NavigationDestination(
               selectedIcon: Icon(
-                Icons.video_collection,
+                Icons.shopify_outlined,
                 color: colorScheme.primaryContainer,
               ),
               icon: Icon(
-                Icons.video_collection_outlined,
+                Icons.shopify,
                 color: colorScheme.onPrimaryContainer,
               ),
-              label: 'Posts',
+              label: 'Shop',
             ),
             NavigationDestination(
               selectedIcon: Icon(

@@ -107,7 +107,7 @@ class _LoginState extends State<Login> {
               width: double.infinity,
               height: 250,
               child: Image.asset(
-                "assets/images/Leaf_image.png",
+                "assets/images/leaf_image.png",
                 fit: BoxFit.cover,
               ),
             ),

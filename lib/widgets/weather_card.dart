@@ -18,7 +18,7 @@ class WeatherCard extends StatelessWidget {
     ColorScheme colorScheme = Theme.of(context).colorScheme;
     return Container(
         decoration: BoxDecoration(
-          color: colorScheme.primary.withOpacity(.9),
+          color: colorScheme.primaryContainer.withOpacity(.1),
           borderRadius: BorderRadius.circular(12),
           border: Border.all(color: colorScheme.onSurface.withOpacity(.5))
         ),
@@ -28,11 +28,11 @@ class WeatherCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Icon(icon, 
-              color: colorScheme.onPrimary,),
+              color: colorScheme.onBackground,),
               Text(
                 title,
                 style: TextStyle(
-                  color: colorScheme.onPrimary,
+                  color: colorScheme.onBackground,
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
@@ -41,11 +41,11 @@ class WeatherCard extends StatelessWidget {
               Row(
                 children: [
                   Text(value,
-                    style: TextStyle(color: colorScheme.onPrimary),
+                    style: TextStyle(color: colorScheme.onBackground),
                   ),
                   const Spacer(),
                   Text(unit,
-                    style: TextStyle(color: colorScheme.onPrimary),
+                    style: TextStyle(color: colorScheme.onBackground),
                   ),
                 ],
               )

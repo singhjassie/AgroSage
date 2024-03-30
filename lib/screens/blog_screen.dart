@@ -1,6 +1,6 @@
 import 'package:agrosage/model/blog_model.dart';
+import 'package:agrosage/screens/posts_screen.dart';
 import 'package:agrosage/widgets/label_divider.dart';
-import 'package:agrosage/widgets/law_card.dart';
 import 'package:agrosage/widgets/learn.dart';
 import 'package:agrosage/widgets/text_tile.dart';
 import 'package:agrosage/widgets/video_carousel_slider.dart';
@@ -22,36 +22,48 @@ class BlogScreen extends StatelessWidget {
           const SizedBox(
             height: 3,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 12),
             child: Column(
               children: [
-                const LabelDivider(label: 'News'),
+                LabelDivider(label: 'News'),
                 TextTile(
                     title: 'title',
                     description: 'description',
-                    image: Image.asset('assets/images/Leaf_image.png')),
+                    image_path: 'assets/images/leaf_image.png',
+                    destination: PostScreen(),
+                    ),
                 TextTile(
                     title: 'title',
                     description: 'description',
-                    image: Image.asset('assets/images/Leaf_image.png')),
+                    image_path: 'assets/images/leaf_image.png',
+                    destination: PostScreen(),
+                    ),
                 TextTile(
                     title: 'title',
                     description: 'description',
-                    image: Image.asset('assets/images/Leaf_image.png')),
-                const LabelDivider(label: 'Others'),
+                    image_path: 'assets/images/leaf_image.png',
+                    destination: PostScreen(),
+                    ),
+                LabelDivider(label: 'Others'),
                 TextTile(
                     title: 'title',
                     description: 'description',
-                    image: Image.asset('assets/images/Leaf_image.png')),
+                    image_path: 'assets/images/leaf_image.png',
+                    destination: PostScreen(),
+                    ),
                 TextTile(
                     title: 'title',
                     description: 'description',
-                    image: Image.asset('assets/images/Leaf_image.png')),
+                    image_path: 'assets/images/leaf_image.png',
+                    destination: PostScreen(),
+                    ),
                 TextTile(
                     title: 'title',
                     description: 'description',
-                    image: Image.asset('assets/images/Leaf_image.png')),
+                    image_path: 'assets/images/leaf_image.png',
+                    destination: PostScreen(),
+                    ),
               ],
             ),
           )

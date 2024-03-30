@@ -1,7 +1,10 @@
+import 'package:agrosage/screens/chatbot_screen.dart';
+import 'package:agrosage/screens/crop_suggestion_screen.dart';
+import 'package:agrosage/screens/detection_screen.dart';
 import 'package:agrosage/widgets/label_divider.dart';
-import 'package:agrosage/widgets/price_card.dart';
 import 'package:agrosage/widgets/product_cat_card.dart';
 import 'package:agrosage/widgets/text_tile.dart';
+import 'package:agrosage/widgets/vertical_card.dart';
 import 'package:agrosage/widgets/weather_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -66,7 +69,11 @@ class HomeScreen extends StatelessWidget {
                     ),
                     delegate: SliverChildBuilderDelegate(
                       (BuildContext context, int index) {
-                        return const ProductCategoryCard(categoryName: 'Seeds', imageUrl: 'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGxhbnR8ZW58MHx8MHx8fDA%3D',);
+                        return const ProductCategoryCard(
+                          categoryName: 'Seeds',
+                          imageUrl:
+                              'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGxhbnR8ZW58MHx8MHx8fDA%3D',
+                        );
                       },
                       childCount: 6,
                     ),
@@ -74,27 +81,42 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
               const LabelDivider(label: 'Farm with AI'),
-              TextTile(title: 'Get Crop Suggestion', description: 'Get crop suggestion based on your location', image: Image.asset('assets/images/Leaf_image.png'),),
-              TextTile(title: 'Chat with AI Chatbot', description: 'Get solution of farming problems by chatting with AI Chatbot', image: Image.asset('assets/images/Leaf_image.png'),),
-              TextTile(title: 'Detect crop Disieses', description: 'Detect crop Disieses and Get AI Based Solution', image: Image.asset('assets/images/Leaf_image.png'),),
+              const TextTile(
+                title: 'Get Crop Suggestion',
+                description: 'Get crop suggestion based on your location',
+                image_path: 'assets/images/leaf_image.png',
+                destination: CropSuggestionScreen(),
+              ),
+              const TextTile(
+                title: 'Chat with AI Chatbot',
+                description:
+                    'Get solution of farming problems by chatting with AI Chatbot',
+                image_path: 'assets/images/leaf_image.png',
+                destination: ChatbotScreen(),
+              ),
+              const TextTile(
+                title: 'Detect crop Disieses',
+                description: 'Detect crop Disieses and Get AI Based Solution',
+                image_path: 'assets/images/leaf_image.png',
+                destination: DetectionScreen(),
+              ),
               const LabelDivider(label: 'Current Crop Price'),
               const SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    PriceCard(),
-                    PriceCard(),
-                    PriceCard(),
-                    PriceCard(),
-                    PriceCard(),
-                    PriceCard(),
+                    VerticalCardWithImage(),
+                    VerticalCardWithImage(),
+                    VerticalCardWithImage(),
+                    VerticalCardWithImage(),
+                    VerticalCardWithImage(),
                   ],
                 ),
               ),
               const SizedBox(
                 height: 16,
               ),
-             const LabelDivider(label: 'Weather'),
+              const LabelDivider(label: 'Weather'),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 12),
                 child: CustomScrollView(

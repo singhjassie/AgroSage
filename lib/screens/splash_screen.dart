@@ -1,5 +1,6 @@
 import 'package:agrosage/agrosage.dart';
 import 'package:agrosage/screens/login_screen.dart';
+import 'package:agrosage/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -18,8 +19,8 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: (context) =>
-                const AgroSage()), // Replace with your home screen
+          builder: (context) => const WelcomeScreen(),
+        ), // Replace with your home screen
       );
     });
   }

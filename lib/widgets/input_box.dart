@@ -72,3 +72,46 @@ class _InputBoxState extends State<InputBox> {
     );
   }
 }
+
+
+class SuggestionInput extends StatefulWidget {
+  const SuggestionInput({super.key, required this.hintText});
+
+  final String hintText;
+
+  @override
+  State<SuggestionInput> createState() => _SuggestionInputState();
+}
+
+class _SuggestionInputState extends State<SuggestionInput> {
+  @override
+  Widget build(BuildContext context) {
+       ColorScheme colorScheme = Theme.of(context).colorScheme;
+    return TextFormField(
+      decoration: InputDecoration(
+          filled: true,
+          label: Text(widget.hintText),
+          fillColor: colorScheme.secondaryContainer,
+         hintText:widget.hintText,
+          contentPadding: const EdgeInsets.symmetric(
+            horizontal: 16,
+          ),
+          hintStyle: TextStyle(
+            color: colorScheme.onSecondaryContainer.withOpacity(.5),
+          ),
+          border: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: colorScheme.primary,
+            ),
+            borderRadius: BorderRadius.circular(12),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: colorScheme.primary,
+            ),
+            borderRadius: BorderRadius.circular(12),
+          )),
+    );
+    
+  }
+}

@@ -1,27 +1,11 @@
 import 'package:flutter/material.dart';
 
-class OtherProductScreen extends StatelessWidget {
-  const OtherProductScreen({super.key});
+class ShopScreen extends StatelessWidget {
+  const ShopScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Row(
-            children: [
-              Text(
-                "More Product",
-                style: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-      body: Padding(
+    return Padding(
         padding: const EdgeInsets.all(16.0),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -132,7 +116,6 @@ class OtherProductScreen extends StatelessWidget {
             );
           },
         ),
-      ),
-    );
+      );
   }
 }
