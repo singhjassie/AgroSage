@@ -1,7 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 class DetectionResult extends StatefulWidget {
-  const DetectionResult({super.key});
+  const DetectionResult({super.key, required this.image, required this.diseaseName});
+  final File image;
+  final String diseaseName;
 
   @override
   State<DetectionResult> createState() => _DetectionResultState();
@@ -26,10 +30,7 @@ class _DetectionResultState extends State<DetectionResult> {
                 width: double.infinity,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20), // Adjust the value as needed
-                  child: Image.asset(
-                    "assets/images/leaf_image.png",
-                    fit: BoxFit.cover,
-                  ),
+                  child: Image.file(widget.image),
                 ),
               ),
             ),

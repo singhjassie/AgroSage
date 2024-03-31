@@ -1,17 +1,31 @@
-import 'dart:convert';
+import 'dart:io';
 import 'package:http/http.dart' as http;
-import 'package:image_picker/image_picker.dart';
+import 'dart:convert';
 
-class CropDiseaseDetectionAPI{
-  static Future<Map<String, dynamic>> predictImage(XFile? imageFile) async {
-    var request = http.MultipartRequest('POST', Uri.parse('https://mehakpreetkaur.us-east-1.modelbit.com/v1/recommendation/latest'));
-    request.files.add(await http.MultipartFile.fromPath('file', imageFile!.path));
 
-    var response = await request.send();
-    var responseData = await response.stream.bytesToString();
-    return jsonDecode(responseData);
-  }
+Future<Map<String, dynamic>> predictImage(File? imageFile) async {
+  print(
+      'detecting.....................................................................................................................................');
+  var request = http.MultipartRequest(
+      'POST', Uri.parse('http://192.168.31.134:8001/predict'));
+  request.files.add(http.MultipartFile.fromBytes(
+      'image', imageFile!.readAsBytesSync(),
+      filename: imageFile.path));
+
+  print(
+      'sending.....................................................................................................................................');
+
+  var response = await request.send();
+  print(
+      'sent.....................................................................................................................................');
+
+  var responseData = await response.stream.bytesToString();
+  print(responseData);
+  return jsonDecode(responseData);
 }
+
+
+
 // import 'package:flutter/material.dart';
 // import 'package:http/http.dart' as http;
 // import 'package:image_picker/image_picker.dart';

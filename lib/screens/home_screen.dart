@@ -1,6 +1,7 @@
 import 'package:agrosage/data/apis/weather.dart';
 import 'package:agrosage/data/product_list.dart';
 import 'package:agrosage/screens/chatbot_screen.dart';
+import 'package:agrosage/screens/crop_suggestion_screen.dart';
 import 'package:agrosage/screens/detection_screen.dart';
 import 'package:agrosage/widgets/label_divider.dart';
 import 'package:agrosage/widgets/product_cat_card.dart';
@@ -111,7 +112,7 @@ class HomeScreen extends StatelessWidget {
                 description: "${AppLocalizations.of(context)?.suggestion_description}",
                 imagePath: 'assets/images/crop-suggestion.jpg',
                 onTap: () {
-                  
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const CropSuggestionScreen(),));
                 },
               ),
               // const LabelDivider(label: 'Current Crop Price'),
