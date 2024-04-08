@@ -4,21 +4,12 @@ import 'dart:convert';
 
 
 Future<Map<String, dynamic>> predictImage(File? imageFile) async {
-  print(
-      'detecting.....................................................................................................................................');
-  var request = http.MultipartRequest(
-      'POST', Uri.parse('http://192.168.31.134:8001/predict'));
+ var request = http.MultipartRequest(
+      'POST', Uri.parse('https://kml1-cropdisease.hf.space/predict'));
   request.files.add(http.MultipartFile.fromBytes(
-      'image', imageFile!.readAsBytesSync(),
+      'file', imageFile!.readAsBytesSync(),
       filename: imageFile.path));
-
-  print(
-      'sending.....................................................................................................................................');
-
   var response = await request.send();
-  print(
-      'sent.....................................................................................................................................');
-
   var responseData = await response.stream.bytesToString();
   print(responseData);
   return jsonDecode(responseData);

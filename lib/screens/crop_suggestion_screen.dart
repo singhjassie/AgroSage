@@ -1,7 +1,6 @@
 import 'package:agrosage/data/apis/crop_sugestion.dart';
 import 'package:agrosage/widgets/input_box.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 
 class CropSuggestionScreen extends StatelessWidget {
   const CropSuggestionScreen({super.key});

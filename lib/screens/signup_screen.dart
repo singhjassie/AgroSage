@@ -54,18 +54,22 @@ class _SignUpState extends State<SignUp> {
         userModel: userModel,
         onSuccess: () {
           // Upon successful data saving, perform further actions
-          ap.saveUserDataToSP().then((value) => ap.setSignIn().then((value) {
-                Navigator.pushAndRemoveUntil(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ProfileScreen(
-                      name: usernameController.text.trim(), // Pass username
-                      email: emailController.text.trim(), // Pass email
-                    ),
-                  ),
-                  (route) => false,
-                );
-              }));
+          ap.saveUserDataToSP().then(
+                (value) => ap.setSignIn().then(
+                  (value) {
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ProfileScreen(
+                          name: usernameController.text.trim(), // Pass username
+                          email: emailController.text.trim(), // Pass email
+                        ),
+                      ),
+                      (route) => false,
+                    );
+                  },
+                ),
+              );
         },
       );
     }

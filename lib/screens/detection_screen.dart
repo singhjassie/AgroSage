@@ -1,6 +1,5 @@
 import 'dart:io';
 
-
 import 'package:agrosage/data/apis/crop_disease_detection.dart';
 import 'package:agrosage/screens/detection_result_screen.dart';
 import 'package:flutter/material.dart';
@@ -21,17 +20,23 @@ class _DetectionScreenState extends State<DetectionScreen> {
   bool detecting = false;
   bool precautionLoading = false;
 
-
-
-  Future<void> _onPick(BuildContext context,ImageSource source) async {
+  Future<void> _onPick(BuildContext context, ImageSource source) async {
     final pickedFile =
         await ImagePicker().pickImage(source: source, imageQuality: 50);
     if (pickedFile != null) {
-        _selectedImage = File(pickedFile.path);
-        disease = await predictImage(_selectedImage);
-        print('pushig...');
-        Navigator.push(context, MaterialPageRoute(builder: (context) => DetectionResult(image: _selectedImage!, diseaseName: disease.toString())),);
-
+      _selectedImage = File(pickedFile.path);
+      disease = await predictImage(_selectedImage);
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => DetectionResult(
+                  image: _selectedImage!,
+                  diseaseName: disease!['disease'],
+                  diseaseConfidence: disease!['confidence'].toString(),
+                  diseaseDesc:
+                      "jfiewheifowhehrfheoifhogewofgourebwfhboseuhfoiuhseoiuhfousehohfdboseuhbfouhbseoufgousebofjhge8shfkjsehfo8geljfbpei",
+                )),
+      );
     }
   }
 
@@ -42,7 +47,10 @@ class _DetectionScreenState extends State<DetectionScreen> {
       body: Column(
         children: [
           const Spacer(),
-          const Icon(Icons.add_a_photo, size: 225,),
+          const Icon(
+            Icons.add_a_photo,
+            size: 225,
+          ),
           const Spacer(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 35),
@@ -70,8 +78,8 @@ class _DetectionScreenState extends State<DetectionScreen> {
                   ),
                 ),
                 const SizedBox(
-            height: 75,
-          ),
+                  height: 75,
+                ),
               ],
             ),
           )
